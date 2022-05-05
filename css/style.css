@@ -46,8 +46,18 @@ p{
 
 /* header */
 header{
-    padding: 10px 20px;
+    padding: 10px 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
     border-bottom: 1px solid #708090;
+    transition: background-color .3s, box-shadow .3s;
+    z-index: 1;
+}
+
+header.scrolled{
+    background: rgba(255,255,255,.95);
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
 }
 
 header .container{
@@ -81,6 +91,10 @@ header .container .menu li + li {
 main section{
     text-align: center;
     padding: 24px 0;
+}
+
+main section#introduce{
+    padding: 128px 0 24px;
 }
 
 main section h1{
@@ -142,7 +156,14 @@ footer .up{
 }
 
 footer .up a{
-    padding: 8px 10px;
+    padding: 10px 16px;
     background: #555;
     color: #fff;
+    opacity: 0;
+    font-size: 32px;
+    transition: opacity .3s;
+}
+
+#nav.scrolled{
+    opacity: 1;
 }
